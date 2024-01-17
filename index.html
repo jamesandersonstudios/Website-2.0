@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>James | Portfolio</title>
+    <link rel="icon" type="image" href="./assets/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <div id="particles-js"></div>
+    <div id=""> 
+        <div class="box1 onlywide animated bounceOutLeft" style="animation-delay: 1700ms;"></div>
+        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay: 1800ms;"></div>
+        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay: 1900ms;"></div>
+        <div class="box2 animated bounceOutRight" style="animation-delay: 1900ms;"></div>
+        <div class="box2 onlywide animated bounceOutRight" style="animation-delay: 1800ms;"></div>
+        <div class="box2 onlywide animated bounceOutRight" style="animation-delay: 1700ms;"></div>
+    </div>
+    <a id="about" onclick="showabout()" class="animated fadeIn" style="animation-delay: 1000ms;">about</a>
+    <a id="work" onclick="showwork()" class="animated fadeIn" style="animation-delay: 1000ms;">work</a>
+    <a id="contact" onclick="showcontact()" class="animated fadeIn" style="animation-delay: 1000ms;">contact</a>
+    <a id="projects" onclick="showprojects()" class="animated fadeIn" style="animation-delay: 1000ms;">projects</a>
+    <div id="middle" class="animated slideInDown" style="animation-delay: 2000ms;">
+        <h1>James</h1>
+        <h2>Photographer / Graphic Designer / Real* Human</h2>
+        <div id="menu">
+            <a onclick="showabout()">about</a>
+            <a onclick="showwork()">work</a>
+            <a onclick="showcontact()">contact</a>
+            <a onclick="showprojects()">projects</a>
+        </div>
+        <table>
+            <tr>
+                <td class="animated zoomIn" style="animation-delay:2.4s;"><a class="social"
+                        href="https://www.linkedin.com/in/James"><i class="fab fa-linkedin"></i></a></td>
+                <td class="animated zoomIn" style="animation-delay:2.6s;"><a class="social"
+                        href="https://twitter.com/James"><i class="fab fa-twitter"></i></a></td>
+                <td class="animated zoomIn" style="animation-delay:2.8s;"><a class="social"
+                        href="https://instagram.com/jamesphotography.ig"><i class="fab fa-instagram"></i></a></td>
+                <td class="animated zoomIn" style="animation-delay:3.0s;"><a class="social"
+                        href="https://github.com/James"><i class="fab fa-github"></i></a></td>
+            </tr>
+        </table>
+    </div>
+    <div id="projects_container" class="container">
+        <div onclick="closeprojects()"><i class="fas fa-angle-right"></i></div>
+        <h1>Photos</h1>
+        <section>
+            <h2>My Photos</h2>
+            <p>
+                This archive page is a collection of my work, including photographs from my latest project. I’ve carefully curated each image to showcase my skills and creativity. The images are arranged in a grid-based layout, making it easy to browse through my portfolio. I hope you enjoy looking through my work and feel free to contact me if you have any questions or comments.
+            </p>
+            <ul>
+                <div class="project_card">
+                    <div class="project_info">
+                        <h3>2024</h3>
+                        <p>All photos from 2024</p>
+                        <button class="btn_one"><a
+                                href="https://Jamesphotography.github.io/404.html"
+                                style="color: inherit; text-decoration: none"> View Photos From 2024 </a></button>
+                    </div>
+                </div>
+                <div class="project_card">
+                    <div class="project_info">
+                        <h3>2023</h3>
+                        <p>All photos from 2023</p>
+                        <button class="btn_one"><a href="https://Jamesphotography.github.io/404.html"
+                                style="color: inherit; text-decoration: none"> View Photos From 2023 </a></button>
+                    </div>
+                </div>
+                <div class="project_card">
+                    <div class="project_info">
+                        <h3>2022</h3>
+                        <p>All photos from 2022</p>
+                        <button class="btn_one"><a href="https://Jamesphotography.github.io/404.html"
+                                style="color: inherit; text-decoration: none"> View Photos From 2022 </a></button>
+                    </div>
+                </div>
+                <div class="project_card">
+                    <div class="project_info">
+                        <h3>All in One Archive</h3>
+                        <p>All photos ever taken</p>
+                        <button class="btn_one"><a href="https://Jamesphotography.github.io/404.html"
+                                style="color: inherit; text-decoration: none"> View Photos From 2021 </a></button>
+                    </div>
+                </div>
+            </ul>
+        </section>
+    </div>
+    <div id="work_container" class="container">
+        <div onclick="closework()"><i class="fas fa-angle-right"></i></div>
+        <h1>work.</h1>
+        <section>
+            <h2></h2>
+            <p>
+                Welcome! I'm James Photography, a passionate beginer professional specialising in Web Designing, Photography, 
+                Graphic Designing, and Cyber Security. With 4 years of personal experience, I bring fresh
+                and innovative solutions to every project. From visually appealing, secure websites to unique, meaningful photos
+                and captivating graphics, I deliver high-quality work that exceeds expectations. Let's collaborate and
+                create remarkable digital experiences. Explore my Instagram page for samples and connect.
+            </p>
+            <div id="used">
+                <div><i class="fas fa-circle"></i>&nbsp;Web Designing</div>
+                <div><i class="fas fa-circle"></i>&nbsp;Content Writing</div>
+                <div><i class="fas fa-circle"></i>&nbsp;Graphic Designing</div>
+            </div>
+            <button class="btn_one"><a href="./assets/Resume.pdf" target="_blank"
+                    style="color: inherit; text-decoration: none">View
+                    Resume</a></button>
+        </section>
+    </div>
+    <div id="about_container" class="container">
+        <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
+        <h1>About</h1>
+        <section>
+            <h2>About Me</h2>
+            <p>
+                Hello there! I'm James Photography, a professional self-taught Photographer based in Australia. With a strong
+                passion for menaingful photos and a keen eye for creative ideas, I specialise in transforming ideas
+                into fully functional digital images. My goal is to deliver exceptional results that surpass client
+                expectations.
+            </p>
+            <p>
+                Alongside my Photography expertise, I also possess a strong bond with Cyber Security. From
+                captivating Infographics to secure protocols, I merge technical proficiency with
+                security to create secure, fast and efficient solutions. I strive to strike the perfect balance between
+                security and functionality, ensuring that each project stands a chance against the ever evolving technology world.
+            </p>
+            <p>
+                Feel free to explore my portfolio on my website, where you can witness the diverse range of projects
+                I've had the privilege to work on. Let's collaborate to bring your ideas to life with remarkable digital
+                experiences that truly stand out.
+            </p>
+
+        </section>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <style>
+                section {
+                    margin-bottom: 20px;
+                }
+        
+                #used div {
+                    margin-bottom: 10px;
+                    padding: 8px;
+                    transition: transform 0.3s ease, background 0.3s ease;
+                }
+        
+                #used div:hover {
+                    transform: scale(1.2); /* Increase size on hover */
+                    background: linear-gradient(45deg, #4CAF50, #2196F3);
+                    color: white; /* Change text color on hover if needed */
+                    cursor: pointer; /* Change cursor to pointer on hover */
+                }
+            </style>
+        </head>
+        <body>
+        
+        <section>
+            <h2>Skills</h2>
+            <div id="used">
+                <div class="bubble-hover"><i class="fas fa-circle"></i>&nbsp;Canva</div>
+                <div class="bubble-hover"><i class="fas fa-circle"></i>&nbsp;Lightroom</div>
+                <div class="bubble-hover"><i class="fas fa-circle"></i>&nbsp;Malware Analysis</div>
+                <div class="bubble-hover"><i class="fas fa-circle"></i>&nbsp;SysInternal Suite Expertise</div>
+                <div class="bubble-hover"><i class="fas fa-circle"></i>&nbsp;Manual Cameras - DSLR and SLR</div>
+                <div class="bubble-hover"><i class="fas fa-circle"></i>&nbsp;Raspberry PI</div>
+                <div class="bubble-hover"><i class="fas fa-circle"></i>&nbsp;Python</div>
+                <div class="bubble-hover"><i class="fas fa-circle"></i>&nbsp;SQL</div>
+                <div class="bubble-hover"><i class="fas fa-circle"></i>&nbsp;Markdown</div>
+                <div class="bubble-hover"><i class="fas fa-circle"></i>&nbsp;JavaScript</div>
+                <!-- Add more skill items here -->
+            </div>
+        </section>
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const bubbleHoverItems = document.querySelectorAll('.bubble-hover');
+        
+                bubbleHoverItems.forEach(item => {
+                    item.addEventListener('mousemove', function (e) {
+                        const mouseX = e.pageX - item.offsetLeft;
+                        const mouseY = e.pageY - item.offsetTop;
+        
+                        const distanceX = Math.abs(mouseX - item.clientWidth / 2);
+                        const distanceY = Math.abs(mouseY - item.clientHeight / 2);
+        
+                        if (distanceX > item.clientWidth / 2 || distanceY > item.clientHeight / 2) {
+                            item.style.background = 'linear-gradient(45deg, #4CAF50, #2196F3)';
+                            item.style.color = 'white';
+                            item.style.transform = 'scale(1.2)';
+                        } else {
+                            item.style.background = '';
+                            item.style.color = '';
+                            item.style.transform = '';
+                        }
+                    });
+        
+                    item.addEventListener('mouseleave', function () {
+                        item.style.background = '';
+                        item.style.color = '';
+                        item.style.transform = '';
+                    });
+                });
+            });
+        </script>
+        
+    </div>
+    <div id="contact_container" class="container">
+        <div onclick="closecontact()"><i class="fas fa-angle-down"></i></div>
+        <h1>contact.</h1>
+        <section>
+            <h2>contact me</h2>
+            <p>
+            <form action="https://formcarry.com/s/5TbSz7PJN1G" method="POST" class="formcarry-form">
+                <input name="name" type="text" placeholder="name" required />
+                <input name="email" type="email" placeholder="email" required /><br>
+                <textarea name="message" placeholder="your message" required rows="5"></textarea><br>
+                <button class="btn_one">send</button>
+            </form>
+            </p>
+        </section>
+    </div>
+    <div id="footer">
+        © 2017 – 2024 <a href="https://www.instagram.com/jamesphotography.ig">James Photography</a> | All Rights Reserved
+    </div>
+    <script src="index.js" type="text/javascript"></script>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
