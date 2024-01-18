@@ -1,22 +1,22 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
-
-// helper
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
 .center-xy {
-  // width: inherit;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   position: absolute;
 }
 
 html, body {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: 16px;
 }
 
 html {
   box-sizing: border-box;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 body {
@@ -38,7 +38,7 @@ body {
 p {
   color: #fff;
   font-size: 24px;
-  letter-spacing: .2px;
+  letter-spacing: 0.2px;
   margin: 0;
 }
 
@@ -61,8 +61,7 @@ p {
   position: absolute;
   overflow: inherit;
   cursor: pointer;
-
-  &:hover {
-    fill: #888;
-  }
+}
+#cb-replay:hover {
+  fill: #888;
 }
