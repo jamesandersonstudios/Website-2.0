@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 Not Found</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: black;
@@ -16,6 +16,7 @@
             height: 100vh;
             margin: 0;
             overflow: hidden;
+            flex-direction: column;
         }
 
         .text-container {
@@ -23,15 +24,15 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            position: relative; /* Added position relative to allow absolute positioning of cursor */
+            position: relative;
         }
 
         .cursor {
             display: inline-block;
-            animation: blink 0.7s infinite; /* Faster blink animation */
-            position: absolute; /* Position the cursor absolutely within the text container */
-            bottom: 5px; /* Adjusted cursor height, modify this value as needed */
-            left: 0; /* Align cursor with the left side of the text initially */
+            animation: blink 0.7s infinite;
+            position: absolute;
+            bottom: 5px;
+            left: 0;
         }
 
         @keyframes blink {
@@ -50,28 +51,28 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const errorMessage = "Sorry, the page you are looking for might be in another universe.";
-
+            const errorMessage = "Sorry, the page you are looking for might be in another universe. That's all we know. (╯°□°)╯︵ ┻━┻";
+    
             let index = 0;
             let messageElement = document.getElementById('error-message');
             let cursorElement = document.getElementById('cursor');
-
+    
             function type() {
                 if (index < errorMessage.length) {
                     messageElement.innerHTML += errorMessage.charAt(index);
-
-                    // Update cursor position based on the width and height of the error message
-                    cursorElement.style.left = messageElement.offsetWidth + 'px';
-                    cursorElement.style.bottom = '10px'; // Adjusted cursor height
-
+    
+                    // Update cursor position based on the width of the text container
+                    cursorElement.style.left = (messageElement.getBoundingClientRect().right - messageElement.getBoundingClientRect().left) + 'px';
+                    cursorElement.style.bottom = '10px';
+    
                     index++;
-                    setTimeout(type, 50); // Adjusted timing for faster typing, you can modify this value for the desired speed
+                    setTimeout(type, 30);
                 } else {
-                    cursorElement.style.display = 'none'; // Hide cursor when typing is complete
+                    cursorElement.style.display = 'none';
                 }
             }
-
-            type(); // Start typing immediately
+    
+            type();
         });
     </script>
 </body>
