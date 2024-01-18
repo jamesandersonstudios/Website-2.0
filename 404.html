@@ -1,25 +1,66 @@
-!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Roboto Mono', monospace;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
 
-<style type=text/css>
+        .text-container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-p {    color: #0ecc8a;    
-font-weight: 900;   
-font-size: 20px;    
-font-family: Helvetica, Arial, sans-serif;   
- }
+        .typing-indicator {
+            animation: blink 1s infinite;
+            display: inline-block;
+        }
 
-</style>
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
 </head>
-
 <body>
+    <div class="text-container">
+        <h1>404 Not Found</h1>
+        <p id="error-message"></p>
+        <span class="typing-indicator">_</span>
+    </div>
 
-<a href="#"><img src="site.jpg"></a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const errorMessage = "Sorry, the page you are looking for might be in another universe.";
 
-<p>This was a web page for an organization that used to exist. This organization no longer exists as it has been replaced with a new organization to teach surf kids the values and love of the ocean. The new site is: https://www.pleasurepointsurfclub.com/
-<br><br> 
-If you came upon this page by mistake, try checking the URL in your web browser.</p>
+            let index = 0;
+            let messageElement = document.getElementById('error-message');
 
+            function type() {
+                if (index < errorMessage.length) {
+                    messageElement.innerHTML += errorMessage.charAt(index);
+                    index++;
+                    setTimeout(type, 50);
+                }
+            }
+
+            setTimeout(type, 1000); // Delay before starting typing
+        });
+    </script>
 </body>
 </html>
