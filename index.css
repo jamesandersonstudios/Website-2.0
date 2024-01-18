@@ -88,6 +88,7 @@ body {
     height: 10vw;
     text-align: center;
     font-size: 25px;
+    font-weight: bold;
     background: transparent;
     color: #fff;
     position: fixed;
@@ -106,6 +107,7 @@ body {
     height:10vw;
     text-align:center;
     font-size:25px;
+    font-weight: bold;
     transform:rotate(-90deg);
     background:transparent;
     color:#fff;
@@ -124,6 +126,7 @@ body {
     height:10vw;
     text-align:center;
     font-size:25px;
+    font-weight: bold;
     transform:rotate(90deg);
     background:transparent;
     color:#fff;
@@ -142,6 +145,7 @@ body {
     height:10vw;
     text-align:center;
     font-size:25px;
+    font-weight: bold;
     background:transparent;
     color:#fff;
     position:fixed;
