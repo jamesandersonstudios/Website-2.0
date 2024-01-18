@@ -23,11 +23,15 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            position: relative; /* Added position relative to allow absolute positioning of cursor */
         }
 
         .cursor {
             display: inline-block;
-            animation: blink 1s infinite;
+            animation: blink 0.7s infinite; /* Faster blink animation */
+            position: absolute; /* Position the cursor absolutely within the text container */
+            bottom: 5px; /* Adjusted cursor height, modify this value as needed */
+            left: 0; /* Align cursor with the left side of the text initially */
         }
 
         @keyframes blink {
@@ -55,18 +59,19 @@
             function type() {
                 if (index < errorMessage.length) {
                     messageElement.innerHTML += errorMessage.charAt(index);
+
+                    // Update cursor position based on the width and height of the error message
+                    cursorElement.style.left = messageElement.offsetWidth + 'px';
+                    cursorElement.style.bottom = '10px'; // Adjusted cursor height
+
                     index++;
-
-                    // Update cursor position based on the width of the error message
-                    cursorElement.style.left = messageElement.offsetWidth + '20';
-
-                    setTimeout(type, 50);
+                    setTimeout(type, 50); // Adjusted timing for faster typing, you can modify this value for the desired speed
                 } else {
                     cursorElement.style.display = 'none'; // Hide cursor when typing is complete
                 }
             }
 
-            setTimeout(type, 1000); // Delay before starting typing
+            type(); // Start typing immediately
         });
     </script>
 </body>
