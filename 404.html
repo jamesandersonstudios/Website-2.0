@@ -41,7 +41,7 @@
     <div class="text-container">
         <h1>404 Not Found</h1>
         <p id="error-message"></p>
-        <span class="cursor">_</span>
+        <span class="cursor" id="cursor">_</span>
     </div>
 
     <script>
@@ -50,12 +50,15 @@
 
             let index = 0;
             let messageElement = document.getElementById('error-message');
+            let cursorElement = document.getElementById('cursor');
 
             function type() {
                 if (index < errorMessage.length) {
                     messageElement.innerHTML += errorMessage.charAt(index);
                     index++;
                     setTimeout(type, 50);
+                } else {
+                    cursorElement.style.display = 'none'; // Hide cursor when typing is complete
                 }
             }
 
