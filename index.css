@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body {
     padding:0px;
@@ -8,7 +8,7 @@ body {
     width:100vw;
     height:100vh;
     overflow:hidden;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 #loading {
     width: 100vw;
@@ -235,7 +235,7 @@ body {
 }
 .btn_one {
     font-size:18px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color:#fff;
     background:transparent;
     border:3px solid #fff;
@@ -252,7 +252,7 @@ body {
 }
 .btn_two {
     font-size:18px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color:rgb(238, 246, 252);
     background:#fff;
     border:3px solid #fff;
@@ -273,7 +273,7 @@ body {
     border:0px;
     border-bottom:3px solid rgba(255,255,255,0.5);
     padding:8px 10px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size:18px;
     transition:0.4s ease-in-out;
     color:#fff;
@@ -286,7 +286,7 @@ body {
     border:0px;
     border-bottom:3px solid rgba(255,255,255,0.5);
     padding:8px 10px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size:18px;
     background:transparent;
     resize:none;
