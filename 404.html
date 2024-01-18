@@ -45,30 +45,29 @@
     </div>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-          const errorMessage = "Sorry, the page you are looking for might be in another universe.";
-  
-          let index = 0;
-          let messageElement = document.getElementById('error-message');
-          let cursorElement = document.getElementById('cursor');
-  
-          function type() {
-              if (index < errorMessage.length) {
-                  messageElement.innerHTML += errorMessage.charAt(index);
-                  cursorElement.style.display = 'inline-block'; // Show cursor while typing
-                  index++;
-  
-                  // Update cursor position based on the width of the error message
-                  cursorElement.style.left = messageElement.offsetWidth + 'px';
-  
-                  setTimeout(type, 50);
-              } else {
-                  cursorElement.style.display = 'none'; // Hide cursor when typing is complete
-              }
-          }
-  
-          setTimeout(type, 1000); // Delay before starting typing
-      });
-  </script>  
+        document.addEventListener('DOMContentLoaded', function () {
+            const errorMessage = "Sorry, the page you are looking for might be in another universe.";
+
+            let index = 0;
+            let messageElement = document.getElementById('error-message');
+            let cursorElement = document.getElementById('cursor');
+
+            function type() {
+                if (index < errorMessage.length) {
+                    messageElement.innerHTML += errorMessage.charAt(index);
+                    index++;
+
+                    // Update cursor position based on the width of the error message
+                    cursorElement.style.left = messageElement.offsetWidth + 'px';
+
+                    setTimeout(type, 50);
+                } else {
+                    cursorElement.style.display = 'none'; // Hide cursor when typing is complete
+                }
+            }
+
+            setTimeout(type, 1000); // Delay before starting typing
+        });
+    </script>
 </body>
 </html>
