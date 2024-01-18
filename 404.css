@@ -1,382 +1,255 @@
-body {
-  margin: 0;
+.cls-1 {
+  fill: #ffc541;
 }
 
-.error-svg {
-  display: block;
+.cls-2 {
+  fill: #4e4066;
 }
 
-#window-1 {
-  animation: light 15s infinite alternate;
-  animation-timing-function: steps(2);
+.cls-3 {
+  fill: #6f5b92;
 }
 
-#window-2 {
-  animation: light 10s infinite alternate;
-  animation-timing-function: steps(2);
+.cls-4 {
+  fill: #f78d5e;
 }
 
-#window-3 {
-  animation: light 17s infinite alternate;
-  animation-timing-function: steps(2);
+.cls-5 {
+  fill: #fa976c;
 }
 
-#window-4 {
-  animation: light 16s infinite alternate;
-  animation-timing-function: steps(2);
+.cls-6,
+.cls-7,
+.cls-8 {
+  fill: #b65c32;
 }
 
-#window-5 {
-  animation: light 19s infinite alternate;
-  animation-timing-function: steps(2);
+.cls-10,
+.cls-6 {
+  opacity: 0.6;
 }
 
-#window-6 {
-  animation: light 14s infinite alternate;
-  animation-timing-function: steps(2);
+.cls-7 {
+  opacity: 0.4;
 }
 
-#window-7 {
-  animation: light 13s infinite alternate;
-  animation-timing-function: steps(2);
+.cls-9 {
+  fill: #f4b73b;
 }
 
-#window-8 {
-  animation: light 19s infinite alternate;
-  animation-timing-function: steps(2);
+.cls-11 {
+  fill: #f9c358;
 }
 
-#window-9 {
-  animation: light 16s infinite alternate;
-  animation-timing-function: steps(2);
+.cls-12 {
+  fill: #9b462c;
 }
 
-#window-10 {
-  animation: light 20s infinite alternate;
-  animation-timing-function: steps(2);
+.cls-13 {
+  fill: #aa512e;
 }
 
-#window-11 {
-  animation: light 16s infinite alternate;
-  animation-timing-function: steps(2);
+.cls-14 {
+  fill: #7d6aa5;
 }
 
-#window-12 {
-  animation: light 10s infinite alternate;
-  animation-timing-function: steps(2);
-}
 
-#window-13 {
-  animation: light 20s infinite alternate;
-  animation-timing-function: steps(2);
-}
+/* animations */
 
-#window-14 {
-  animation: light 17s infinite alternate;
-  animation-timing-function: steps(2);
-}
-
-#window-15 {
-  animation: light 10s infinite alternate;
-  animation-timing-function: steps(2);
-}
-
-#window-16 {
-  animation: light 12s infinite alternate;
-  animation-timing-function: steps(2);
-}
-
-#car-3,
-#car-4,
-#car-5,
-#car-7,
-#car-8 {
-  transform-origin: center center;
+.wheel {
+  animation: wheel-rotate 6s ease infinite;
+  transform-origin: center;
   transform-box: fill-box;
 }
 
-#car-1 {
-  animation: car1 30s infinite linear;
-}
-
-#car-2 {
-  animation: car2 30s infinite linear;
-}
-
-#car-3 {
-  animation: car3 15s infinite linear;
-}
-
-#car-4 {
-  animation: car4 15s infinite linear;
-}
-
-#car-5 {
-  animation: car5 30s infinite linear;
-}
-
-#car-6 {
-  animation: car6 30s infinite linear;
-}
-
-#car-7 {
-  animation: car7 15s infinite linear;
-}
-
-#car-8 {
-  animation: car8 10s infinite linear;
-}
-
-#car-9 {
-  animation: car9 15s infinite linear;
-}
-
-@keyframes car1 {
-  0% {
-    transform: translate(0, 0);
-  }
-  20% {
-    transform: translate(-23.25%, -150px);
-  }
-  30% {
-    transform: translate(-23.25%, -128px);
-  }
+@keyframes wheel-rotate {
   50% {
-    transform: translate(0, 22px);
-  }
-  70% {
-    transform: translate(46.5%, 322px);
-  }
-  80% {
-    transform: translate(46.5%, 300px);
+    transform: rotate(360deg);
+    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   }
   100% {
-    transform: translate(0, 0);
+    transform: rotate(960deg)
   }
 }
-@keyframes car2 {
-  0% {
-    transform: translate(0, 0);
-  }
-  20% {
-    transform: translate(46.5%, 300px);
-  }
-  21% {
-    transform: translate(46.5%, 278px);
-  }
-  50% {
-    transform: translate(0, -22px);
-  }
-  70% {
-    transform: translate(-23.25%, -172px);
-  }
-  80% {
-    transform: translate(-23.25%, -150px);
-  }
+
+.clock-hand-1 {
+  animation: clock-rotate 3s linear infinite;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+.clock-hand-2 {
+  animation: clock-rotate 6s linear infinite;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+@keyframes clock-rotate {
   100% {
-    transform: translate(0, 0);
+    transform: rotate(360deg)
   }
 }
-@keyframes car3 {
-  0% {
-    transform: translate(0, 0);
-  }
-  10% {
-    transform: translate(70px, -40px);
-  }
-  11% {
-    transform: translate(70px, -40px) rotateY(180deg);
-  }
+
+#box-top {
+  animation: box-top-anim 2s linear infinite;
+  transform-origin: right top;
+  transform-box: fill-box;
+}
+
+@keyframes box-top-anim {
   50% {
-    transform: translate(550px, 240px) rotateY(180deg);
+    transform: rotate(-5deg)
   }
-  51% {
-    transform: translate(70px, 248px) rotateY(180deg);
+}
+
+#umbrella {
+  animation: umbrella-anim 6s linear infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes umbrella-anim {
+  25% {
+    transform: translateY(10px) rotate(5deg);
   }
   75% {
-    transform: translate(-180px, 105px) rotateY(180deg);
-  }
-  76% {
-    transform: translate(-180px, 105px);
-  }
-  100% {
-    transform: translate(0, 0);
+    transform: rotate(-5deg);
   }
 }
-@keyframes car4 {
-  0% {
-    transform: translate(0, 0);
-  }
-  15% {
-    transform: translate(-87.5px, 50px);
-  }
-  16% {
-    transform: translate(-87.5px, 50px) rotateY(180deg);
-  }
-  31% {
-    transform: translate(-206px, -16px) rotateY(180deg);
-  }
-  32% {
-    transform: translate(-206px, -16px);
-  }
-  47% {
-    transform: translate(-80px, -80px);
-  }
-  74% {
-    transform: translate(-90px, -90px) rotateY(180deg);
-  }
-  89% {
-    transform: translate(44px, -24px) rotateY(180deg);
-  }
-  90% {
-    transform: translate(44px, -24px);
-  }
-  100% {
-    transform: translate(0, 0);
+
+#cup {
+  animation: cup-rotate 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+  transform-origin: top left;
+  transform-box: fill-box;
+}
+
+@keyframes cup-rotate {
+  50% {
+    transform: rotate(-5deg)
   }
 }
-@keyframes car5 {
-  0% {
-    transform: translate(0, 0);
-  }
-  10% {
-    transform: translate(150px, 82px);
-  }
-  52% {
-    transform: translate(720px, 82px);
-  }
-  72% {
-    transform: translate(210px, -210px);
-  }
-  73% {
-    transform: translate(210px, -210px) rotateY(180deg);
-  }
-  94% {
-    transform: translate(-75px, -45px) rotateY(180deg);
-  }
-  95% {
-    transform: translate(-75px, -45px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
+
+#pillow {
+  animation: pillow-anim 3s linear infinite;
+  transform-origin: center;
+  transform-box: fill-box;
 }
-@keyframes car6 {
-  0% {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-  60% {
-    transform: translate(-31%, -200px);
-    opacity: 1;
-  }
-  61% {
-    transform: translate(-31%, -200px);
-    opacity: 0;
-  }
-  62% {
-    transform: translate(38.25%, 250px);
-    opacity: 0;
-  }
-  63% {
-    transform: translate(38.25%, 250px);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-}
-@keyframes car7 {
-  0% {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-  46% {
-    transform: translate(460px, 265px);
-    opacity: 1;
-  }
-  47% {
-    transform: translate(460px, 265px);
-    opacity: 0;
-  }
-  48% {
-    transform: translate(-100px, 45px) rotateY(180deg);
-    opacity: 0;
-  }
-  79% {
-    transform: translate(-100px, 45px) rotateY(180deg);
-    opacity: 1;
-  }
-  94% {
-    transform: translate(-16px, -6px) rotateY(180deg);
-    opacity: 1;
-  }
-  95% {
-    transform: translate(-16px, -6px);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-}
-@keyframes car8 {
-  0% {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-  20% {
-    transform: translate(-25px, 16px);
-  }
-  21% {
-    transform: translate(-25px, 16px) rotateY(180deg);
-    opacity: 1;
-  }
-  40% {
-    transform: translate(-120px, -34px) rotateY(180deg);
-    opacity: 1;
-  }
-  41% {
-    transform: translate(-120px, -34px);
-    opacity: 0;
-  }
-  42% {
-    transform: translate(80px, -40px);
-    opacity: 0;
+
+@keyframes pillow-anim {
+  25% {
+    transform: rotate(10deg) translateY(5px)
   }
   75% {
-    transform: translate(80px, -40px);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 1;
+    transform: rotate(-10deg)
   }
 }
-@keyframes car9 {
+
+#stripe {
+  animation: stripe-anim 3s linear infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes stripe-anim {
+  25% {
+    transform: translate(10px, 0) rotate(-10deg)
+  }
+  75% {
+    transform: translateX(10px)
+  }
+}
+
+#bike {
+  animation: bike-anim 6s ease infinite;
+}
+
+@keyframes bike-anim {
   0% {
-    transform: translate(0, 0);
-  }
-  20% {
-    transform: translate(31%, -200px);
-  }
-  21% {
-    transform: translate(31%, -222px);
+    transform: translateX(-1300px)
   }
   50% {
-    transform: translate(0, -22px);
-  }
-  60% {
-    transform: translate(-7.75%, 28px);
-  }
-  61% {
-    transform: translate(-7.75%, 50px);
-  }
-  90% {
-    transform: translate(-7.75%, 50px);
+    transform: translateX(0);
+    animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
   }
   100% {
-    transform: translate(0, 0);
+    transform: translateX(1300px)
+  }
+}
+
+#rucksack {
+  animation: ruck-anim 3s linear infinite;
+  transform-origin: top;
+  transform-box: fill-box;
+}
+
+@keyframes ruck-anim {
+  50% {
+    transform: rotate(5deg)
+  }
+}
+
+.circle {
+  animation: circle-anim ease infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  perspective: 0px;
+}
+
+.circle.c1 {
+  animation-duration: 2s
+}
+
+.circle.c2 {
+  animation-duration: 3s
+}
+
+.circle.c3 {
+  animation-duration: 1s
+}
+
+.circle.c4 {
+  animation-duration: 1s
+}
+
+.circle.c5 {
+  animation-duration: 2s
+}
+
+.circle.c6 {
+  animation-duration: 3s
+}
+
+@keyframes circle-anim {
+  50% {
+    transform: scale(.2) rotateX(360deg) rotateY(360deg)
+  }
+}
+
+.four,
+#ou {
+  animation: four-anim cubic-bezier(0.39, 0.575, 0.565, 1) infinite;
+}
+
+.four.a {
+  transform-origin: bottom left;
+  animation-duration: 3s;
+  transform-box: fill-box;
+}
+
+.four.b {
+  transform-origin: bottom right;
+  animation-duration: 3s;
+  transform-box: fill-box;
+}
+
+#ou {
+  animation-duration: 6s;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes four-anim {
+  50% {
+    transform: scale(.98)
   }
 }
