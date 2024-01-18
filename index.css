@@ -253,7 +253,7 @@ body {
 .btn_two {
     font-size:18px;
     font-family: 'Josefin Sans', sans-serif;
-    color:rgb(3, 11, 17);
+    color:rgb(238, 246, 252);
     background:#fff;
     border:3px solid #fff;
     padding:8px 40px;
@@ -317,7 +317,7 @@ body {
     font-weight:bold;
 }
 #footer a {
-    color:rgb(3, 11, 17) ;
+    color:rgb(238, 246, 252) ;
 }
 #particles-js {
     position:fixed;
