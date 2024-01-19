@@ -72,7 +72,7 @@
                         <p>Carefully handpicked, the best images will appear here.</p>
                         <button class="btn_one"><a
                                 href="https://www.instagram.com/jamesphotography.ig/"
-                                style="color: inherit; text-decoration: none"> View Photos From Instagram </a></button>
+                                style="color: inherit; text-decoration: none"> View Photos From Instagram 🡕 </a></button>
                     </div>
                 </div>
                 <div class="project_card">
@@ -80,7 +80,7 @@
                         <h3>Archive</h3>
                         <p>All photos ever taken. This is not puplic, to request a view, please contact me.</p>
                         <button class="btn_one"><a href="./photography/index.html"
-                                style="color: inherit; text-decoration: none"> View Archive </a></button>
+                                style="color: inherit; text-decoration: none"> View Archive 🡕 </a></button>
                     </div>
                 </div>
             </ul>
@@ -91,6 +91,9 @@
         <h1>Gallery</h1>
         <section>
             <h2>My Photography Gallery</h2>
+            <button class="btn_one"><a
+                href="https://www.instagram.com/jamesphotography.ig/"
+                style="color: inherit; text-decoration: none"> View All Photos 🡕 </a></button>
             <div id="gallery" class="gallery">
                 <!-- Images will be dynamically added here by JavaScript -->
             </div>
@@ -103,9 +106,6 @@
         
                 // Reference to the gallery container
                 const galleryContainer = document.getElementById('gallery');
-        
-                // Array to store image elements
-                const imageElements = [];
         
                 // Loop to generate HTML for each image
                 for (let i = 1; i <= numberOfImages; i++) {
@@ -130,20 +130,8 @@
                     });
         
                     // Append the image to the gallery container
-                    imageElements.push(imgElement);
+                    galleryContainer.appendChild(imgElement);
                 }
-        
-                // After all images are loaded, initialize Masonry
-                imagesLoaded(galleryContainer, function () {
-                    new Masonry(galleryContainer, {
-                        itemSelector: '.gallery img',
-                        columnWidth: '.gallery img',
-                        gutter: 10, // Adjust the gutter as needed
-                    });
-                });
-        
-                // Append the image elements to the gallery container
-                imageElements.forEach(imgElement => galleryContainer.appendChild(imgElement));
             });
         </script>        
     </div>
