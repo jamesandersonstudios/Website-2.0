@@ -56,14 +56,15 @@ body {
 #menu {
     width:100%;
     text-align:center;
-    margin:6vh 0px;
+    margin:2vh 0px;
     display:none;
 }
 #menu a {
-    margin:0px 6%;
+    margin:0px 2%;
     font-size:19px;
     color:#fff;
     text-decoration:underline;
+    font-weight: bold;
 }
 #middle {
     width:100vw;
