@@ -23,6 +23,44 @@
 }
 
 
+
+
+
+/* Add the styles for the Instagram button here */
+.btn_one {
+    background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045); /* Instagram-like gradient */
+    color: #FFFFFF; /* White text color */
+    padding: 10px 20px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease; /* Transition for smooth animation */
+}
+
+.btn_one:hover {
+    background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045); /* Keep the same gradient on hover */
+    background-position: 100% 0; /* Move the gradient position on hover */
+    transform: scale(1.1); /* Increase size on hover */
+}
+
+/* Optional: Add some box shadow for depth */
+.btn_one:focus {
+    box-shadow: 0 0 10px rgba(64, 93, 230, 0.5);
+}
+
+/* Optional: Style anchor tag within the button */
+.btn_one a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
 body {
     padding: 0;
     margin: 0;
@@ -285,39 +323,72 @@ body {
 .container p {
     font-size:21px;
 }
+
+
+/* Add the styles for the Instagram button here */
 .btn_one {
+    color: #FFFFFF; /* White text color */
+    padding: 10px 20px; /* Adjust padding as needed */
     font-size:18px;
     font-family: 'Roboto', sans-serif;
-    color:#fff;
-    background:transparent;
     border:3px solid #fff;
     padding:8px 40px;
     border-radius:80px;
     font-weight:bold;
-    margin:2vh 10px;
-    transition:0.4s ease-in-out;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease; /* Transition for smooth animation */
+    background-image: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045); /* Instagram-like gradient */
+    background-size: 200% 200%;
+    background-position: 0 0;
+    background-clip: text; /* Make text color match the gradient */
+    -webkit-background-clip: text; /* For Safari */
 }
 .btn_one:hover {
-    cursor:pointer;
-    color:rgb(3, 11, 17);
-    background:#fff;
+    background-position: 100% 0; /* Move the gradient position on hover */
+    transform: scale(1.1); /* Increase size on hover */
 }
+/* Optional: Add some box shadow for depth */
+.btn_one:focus {
+    box-shadow: 0 0 10px rgba(64, 93, 230, 0.5);
+}
+/* Optional: Style anchor tag within the button */
+.btn_one a {
+    color: inherit;
+    text-decoration: none;
+}
+
 .btn_two {
+    color: #FFFFFF; /* White text color */
+    padding: 10px 20px; /* Adjust padding as needed */
     font-size:18px;
     font-family: 'Roboto', sans-serif;
-    color:rgb(238, 246, 252);
-    background:#fff;
     border:3px solid #fff;
     padding:8px 40px;
     border-radius:80px;
     font-weight:bold;
-    margin:2vh 10px;
-    transition:0.4s ease-in-out;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease; /* Transition for smooth animation */
+    background-image: linear-gradient(45deg, #833cb4, #fd1d1d, #fcb045); /* Instagram-like gradient */
+    background-size: 200% 200%;
+    background-position: 0 0;
+    background-clip: text; /* Make text color match the gradient */
+    -webkit-background-clip: text; /* For Safari */
 }
 .btn_two:hover {
-    cursor:pointer;
-    padding:8px 60px;
+    background-position: 100% 0; /* Move the gradient position on hover */
+    transform: scale(1.1); /* Increase size on hover */
 }
+/* Optional: Add some box shadow for depth */
+.btn_two:focus {
+    box-shadow: 0 0 10px rgba(64, 93, 230, 0.5);
+}
+/* Optional: Style anchor tag within the button */
+.btn_two a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
 .container form input {
     width:46%;
     margin:20px 1%;
