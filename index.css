@@ -1,5 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+/* Add these rules to customize the hover color of Font Awesome icons for each social link */
+/* Add these rules to dynamically change the hover color based on the logo color */
+.social.linkedin:hover {
+    color: #0077b5; /* LinkedIn color */
+}
+
+.social.twitter:hover {
+    color: #1da1f2; /* Twitter color */
+}
+
+.social.instagram:hover {
+    color: #bc2a8d; /* Instagram color */
+}
+
+.social.tiktok:hover {
+    color: #69c9d0; /* TikTok color */
+}
+
+.social.github:hover {
+    color: #333; /* GitHub color */
+}
+
+
 body {
     padding: 0;
     margin: 0;
@@ -26,7 +49,7 @@ body {
     width:50px;
     height:50px;
     border:12px solid #fff;
-    border-bottom:12px solid rgb(3, 11, 17);
+    border-bottom:12px solid #030b11;
     border-radius:50%;
     margin:0;
 }
@@ -53,6 +76,7 @@ body {
     background:rgb(3, 11, 17);
     margin-left:-5px;
 }
+
 #menu {
     width:100%;
     text-align:center;
@@ -84,7 +108,6 @@ body {
     font-size:70px;
     text-decoration:underline;
 }
-/* Add this CSS to style the gallery */
 #gallery_container {
     /* Customize styling for the gallery container */
 }
