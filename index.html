@@ -29,7 +29,7 @@
         <div class="box2 onlywide animated bounceOutRight" style="animation-delay: 1700ms;"></div>
     </div>
     <a id="about" onclick="showabout()" class="animated fadeIn" style="animation-delay: 1000ms;">About</a>
-    <a id="work" onclick="showwork()" class="animated fadeIn" style="animation-delay: 1000ms;">Credit</a>
+    <a id="work" onclick="showwork()" class="animated fadeIn" style="animation-delay: 1000ms;">Gallery</a>
     <a id="contact" onclick="showcontact()" class="animated fadeIn" style="animation-delay: 1000ms;">Contact</a>
     <a id="projects" onclick="showprojects()" class="animated fadeIn" style="animation-delay: 1000ms;">Photos</a>
     <div id="middle" class="animated slideInDown" style="animation-delay: 2000ms;">
@@ -84,16 +84,8 @@
         </section>
     </div>
     <div id="work_container" class="container">
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div onclick="closework()"><i class="fas fa-angle-right"></i></div>
-        <h1>Credit</h1>
-=======
-=======
->>>>>>> parent of 4834f25 (Update index.html)
-        <div onclick="closework()"><i class="fas fa-angle-right"></i></div>About
         <h1>Gallery</h1>
->>>>>>> parent of 4834f25 (Update index.html)
         <section>
             <h2>My Photography Gallery</h2>
             <div id="gallery" class="gallery">
@@ -120,17 +112,21 @@
                 }
     
                 // Check if the image exists using the onerror event
-                imgElement.onerror = function() {
+                imgElement.onerror = function () {
                     // Remove the image element if it fails to load (doesn't exist)
                     galleryContainer.removeChild(imgElement);
                 };
+    
+                // Prevent right-click context menu on the image
+                imgElement.addEventListener('contextmenu', function (event) {
+                    event.preventDefault();
+                });
     
                 // Append the image to the gallery container
                 galleryContainer.appendChild(imgElement);
             }
         </script>
     </div>
-    
     <div id="about_container" class="container">
         <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
         <h1>About</h1>
