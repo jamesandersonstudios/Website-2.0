@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>James | Portfolio | Photographer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
     <link rel="icon" type="image" href="./assets/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
@@ -96,38 +97,55 @@
         </section>
     
         <script>
-            // Assuming your image filenames follow a pattern like image1.jpg, image2.jpg, ..., image100.jpg
-            const numberOfImages = 100;
-    
-            // Reference to the gallery container
-            const galleryContainer = document.getElementById('gallery');
-    
-            // Loop to generate HTML for each image
-            for (let i = 1; i <= numberOfImages; i++) {
-                const imgElement = document.createElement('img');
-                imgElement.src = `./photos/image-min${i}.jpg`; // Adjust the path as needed
-                imgElement.alt = `Image ${i}`;
-    
-                // Add a class to alternate between horizontal and vertical images
-                if (i % 2 === 0) {
-                    imgElement.classList.add('vertical-image');
+            document.addEventListener('DOMContentLoaded', function () {
+                // Assuming your image filenames follow a pattern like image1.jpg, image2.jpg, ..., image100.jpg
+                const numberOfImages = 100;
+        
+                // Reference to the gallery container
+                const galleryContainer = document.getElementById('gallery');
+        
+                // Array to store image elements
+                const imageElements = [];
+        
+                // Loop to generate HTML for each image
+                for (let i = 1; i <= numberOfImages; i++) {
+                    const imgElement = document.createElement('img');
+                    imgElement.src = `./photos/image${i}.jpg`; // Adjust the path as needed
+                    imgElement.alt = `Image ${i}`;
+        
+                    // Add a class to alternate between horizontal and vertical images
+                    if (i % 2 === 0) {
+                        imgElement.classList.add('vertical-image');
+                    }
+        
+                    // Check if the image exists using the onerror event
+                    imgElement.onerror = function () {
+                        // Remove the image element if it fails to load (doesn't exist)
+                        galleryContainer.removeChild(imgElement);
+                    };
+        
+                    // Prevent right-click context menu on the image
+                    imgElement.addEventListener('contextmenu', function (event) {
+                        event.preventDefault();
+                    });
+        
+                    // Append the image to the gallery container
+                    imageElements.push(imgElement);
                 }
-    
-                // Check if the image exists using the onerror event
-                imgElement.onerror = function () {
-                    // Remove the image element if it fails to load (doesn't exist)
-                    galleryContainer.removeChild(imgElement);
-                };
-    
-                // Prevent right-click context menu on the image
-                imgElement.addEventListener('contextmenu', function (event) {
-                    event.preventDefault();
+        
+                // After all images are loaded, initialize Masonry
+                imagesLoaded(galleryContainer, function () {
+                    new Masonry(galleryContainer, {
+                        itemSelector: '.gallery img',
+                        columnWidth: '.gallery img',
+                        gutter: 10, // Adjust the gutter as needed
+                    });
                 });
-    
-                // Append the image to the gallery container
-                galleryContainer.appendChild(imgElement);
-            }
-        </script>
+        
+                // Append the image elements to the gallery container
+                imageElements.forEach(imgElement => galleryContainer.appendChild(imgElement));
+            });
+        </script>        
     </div>
     <div id="about_container" class="container">
         <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
