@@ -1,481 +1,469 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 
 /* Add these rules to customize the hover color of Font Awesome icons for each social link */
 /* Add these rules to dynamically change the hover color based on the logo color */
 .social.linkedin:hover {
-    color: #0077b5; /* LinkedIn color */
+  color: #0077b5; /* LinkedIn color */
 }
 
 .social.twitter:hover {
-    color: #1da1f2; /* Twitter color */
+  color: #1da1f2; /* Twitter color */
 }
 
 .social.instagram:hover {
-    color: #bc2a8d; /* Instagram color */
+  color: #bc2a8d; /* Instagram color */
 }
 
 .social.tiktok:hover {
-    color: #69c9d0; /* TikTok color */
+  color: #69c9d0; /* TikTok color */
 }
 
 .social.github:hover {
-    color: #333; /* GitHub color */
+  color: #333; /* GitHub color */
 }
-
-
-
-
 
 /* Add the styles for the Instagram button here */
 .btn_one {
-    background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045); /* Instagram-like gradient */
-    color: #FFFFFF; /* White text color */
-    padding: 10px 20px; /* Adjust padding as needed */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease; /* Transition for smooth animation */
+  background: linear-gradient(
+    45deg,
+    #833ab4,
+    #fd1d1d,
+    #fcb045
+  ); /* Instagram-like gradient */
+  color: #ffffff; /* White text color */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease; /* Transition for smooth animation */
 }
 
 .btn_one:hover {
-    background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045); /* Keep the same gradient on hover */
-    background-position: 100% 0; /* Move the gradient position on hover */
-    transform: scale(1.1); /* Increase size on hover */
+  background: linear-gradient(
+    45deg,
+    #833ab4,
+    #fd1d1d,
+    #fcb045
+  ); /* Keep the same gradient on hover */
+  background-position: 100% 0; /* Move the gradient position on hover */
+  transform: scale(1.1); /* Increase size on hover */
 }
 
 /* Optional: Add some box shadow for depth */
 .btn_one:focus {
-    box-shadow: 0 0 10px rgba(64, 93, 230, 0.5);
+  box-shadow: 0 0 10px rgba(64, 93, 230, 0.5);
 }
 
 /* Optional: Style anchor tag within the button */
 .btn_one a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 body {
-    padding: 0;
-    margin: 0;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/Backgroundimage.jpg") center center;
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("assets/Backgroundimage.jpg") center center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
 }
 #loading {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    background:rgb(3, 11, 17);
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: rgb(3, 11, 17);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 #spinner {
-    animation: rotate 0.56s infinite linear;
-    width:50px;
-    height:50px;
-    border:12px solid #fff;
-    border-bottom:12px solid #030b11;
-    border-radius:50%;
-    margin:0;
+  animation: rotate 0.56s infinite linear;
+  width: 50px;
+  height: 50px;
+  border: 12px solid #fff;
+  border-bottom: 12px solid #030b11;
+  border-radius: 50%;
+  margin: 0;
 }
 @keyframes rotate {
-    0% {transform: rotate(0deg);}
-    100% {transform: rotate(360deg);}
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 #box {
-    width:100vw;
-    height:100vh;
-    z-index:9;
-    position:fixed;
-    top:0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9;
+  position: fixed;
+  top: 0;
 }
 #box div {
-    width:16.66vw;
-    height:100%;
-    display:inline-block;
+  width: 16.66vw;
+  height: 100%;
+  display: inline-block;
 }
 .box1 {
-    background:rgb(3, 11, 17);
+  background: rgb(3, 11, 17);
 }
 .box2 {
-    background:rgb(3, 11, 17);
-    margin-left:-5px;
+  background: rgb(3, 11, 17);
+  margin-left: -5px;
 }
 
 #menu {
-    width:100%;
-    text-align:center;
-    margin:2vh 0px;
-    display:none;
+  width: 100%;
+  text-align: center;
+  margin: 2vh 0px;
+  display: none;
 }
 #menu a {
-    margin:0px 2%;
-    font-size:19px;
-    color:#fff;
-    text-decoration:underline;
-    font-weight: bold;
+  margin: 0px 2%;
+  font-size: 19px;
+  color: #fff;
+  text-decoration: underline;
+  font-weight: bold;
 }
 #middle {
-    width:100vw;
-    height:90vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    position:fixed;
-    top:0;
-    text-align:center;
-    z-index:1;
-    color:#fff;
-    padding-bottom:10vh;
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  text-align: center;
+  z-index: 1;
+  color: #fff;
+  padding-bottom: 10vh;
 }
 #middle h1 {
-    color:rgb(255, 255, 255);
-    font-size:70px;
-    text-decoration:none;
+  color: rgb(255, 255, 255);
+  font-size: 70px;
+  text-decoration: none;
 }
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 20px; /* Adjust the gap between images as needed */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px; /* Adjust the gap between images as needed */
 }
 .gallery img {
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
 }
 
 .gallery img:hover {
-    transform: scale(1.1);
-}
-
-
-#projects {
-    width: 10vw;
-    height: 10vw;
-    text-align: center;
-    font-size: 25px;
-    font-weight: bold;
-    background: transparent;
-    color: #fff;
-    position: fixed;
-    top: 0;
-    right: 45vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    z-index: 4;
-    transition: 0.4s ease-in-out;
-    border-radius: 0px 0px 100px 100px;
+  transform: scale(1.1);
 }
 
 #about {
-    width:10vw;
-    height:10vw;
-    text-align:center;
-    font-size:25px;
-    font-weight: bold;
-    transform:rotate(-90deg);
-    background:transparent;
-    color:#fff;
-    position:fixed;
-    left:0;
-    bottom:40vh;
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    z-index:4;
-    transition:0.4s ease-in-out;
-    border-radius:0px 0px 100px 100px;
+  width: 10vw;
+  height: 10vw;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  transform: rotate(-90deg);
+  background: transparent;
+  color: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 4;
+  transition: 0.4s ease-in-out;
+  border-radius: 0px 0px 100px 100px;
 }
-#work {
-    width:10vw;
-    height:10vw;
-    text-align:center;
-    font-size:25px;
-    font-weight: bold;
-    transform:rotate(90deg);
-    background:transparent;
-    color:#fff;
-    position:fixed;
-    right:0;
-    bottom:40vh;
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    z-index:4;
-    transition:0.4s ease-in-out;
-    border-radius:0px 0px 100px 100px;
+#photos {
+  width: 10vw;
+  height: 10vw;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  background: transparent;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  right: 45vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 4;
+  transition: 0.4s ease-in-out;
+  border-radius: 0px 0px 100px 100px;
 }
 #contact {
-    width:10vw;
-    height:10vw;
-    text-align:center;
-    font-size:25px;
-    font-weight: bold;
-    background:transparent;
-    color:#fff;
-    position:fixed;
-    bottom:0;
-    left:45vw;
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    z-index:4;
-    transition:0.4s ease-in-out;
-    border-radius:100px 100px 0px 0px;
-}
-#projects:hover {
-    background:rgba(3, 11, 17,0.9);
-    cursor:pointer;
+  width: 10vw;
+  height: 10vw;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  transform: rotate(90deg);
+  background: transparent;
+  color: #fff;
+  position: fixed;
+  right: 0;
+  bottom: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 4;
+  transition: 0.4s ease-in-out;
+  border-radius: 0px 0px 100px 100px;
 }
 #about:hover {
-    background:rgba(3, 11, 17,0.9);
-    cursor:pointer;
+  background: rgba(3, 11, 17, 0.9);
+  cursor: pointer;
 }
-#work:hover {
-    background:rgba(3, 11, 17,0.9);
-    cursor:pointer;
+#photos:hover {
+  background: rgba(3, 11, 17, 0.9);
+  cursor: pointer;
 }
 #contact:hover {
-    background:rgba(3, 11, 17,0.9);
-    cursor:pointer;
+  background: rgba(3, 11, 17, 0.9);
+  cursor: pointer;
 }
 #middle table {
-    width:30%;
-    margin:6vh auto;
+  width: 30%;
+  margin: 6vh auto;
 }
 #middle table tr td {
-    text-align:center;
+  text-align: center;
 }
 .social {
-    color:#fff;
-    font-size:22px;
-    border-radius:50%;
-    transition:0.4s ease-in-out;
-    margin:0px 8px;
-    text-align:center;
+  color: #fff;
+  font-size: 22px;
+  border-radius: 50%;
+  transition: 0.4s ease-in-out;
+  margin: 0px 8px;
+  text-align: center;
 }
-.social:hover { 
-    cursor: pointer;
-    color:rgb(3, 11, 17);
+.social:hover {
+  cursor: pointer;
+  color: rgb(3, 11, 17);
 }
 .container {
-    width:90vw;
-    height:90vh;
-    padding:5vh 5vw;
-    background:rgb(3, 11, 17);
-    color:#fff;
-    z-index:9;
-    position:fixed;
-    max-height:100vh;
-    overflow-y:auto;
-    display:none;
+  width: 90vw;
+  height: 90vh;
+  padding: 5vh 5vw;
+  background: rgb(3, 11, 17);
+  color: #fff;
+  z-index: 9;
+  position: fixed;
+  max-height: 100vh;
+  overflow-y: auto;
+  display: none;
 }
 .container div {
-    font-size:25px;
-    margin:20px 0px;
-    transition:0.4s ease-in-out;
+  font-size: 25px;
+  margin: 20px 0px;
+  transition: 0.4s ease-in-out;
 }
 .container div:hover {
-    cursor:pointer;
+  cursor: pointer;
 }
 .container section {
-    margin:8vh 0px;
+  margin: 8vh 0px;
 }
-#used div{
-    font-size:14px !important;
-    display:inline-block;
-    padding:8px 10px;
-    border:2px solid #fff;
-    margin:0px 10px;
-    border-radius:50px;
+#used div {
+  font-size: 14px !important;
+  display: inline-block;
+  padding: 8px 10px;
+  border: 2px solid #fff;
+  margin: 0px 10px;
+  border-radius: 50px;
 }
 #used:hover {
-    cursor:text;
+  cursor: text;
 }
 #used div:hover {
-    cursor:text;
+  cursor: text;
 }
 .container h1 {
-    font-size:60px;
-    text-decoration:underline;
+  font-size: 60px;
+  text-decoration: underline;
 }
 .container p {
-    font-size:21px;
+  font-size: 21px;
 }
 
 .highlight-text {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .highlight-text::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 50px; /* Adjust the height of the highlight as needed */
-    background-color: #3498db; /* Choose the highlight color */
-    bottom: -5px; /* Adjust the distance between text and highlight */
-    left: 15px;
-    z-index: -1; /* Place the highlight behind the text */
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50px; /* Adjust the height of the highlight as needed */
+  background-color: #3498db; /* Choose the highlight color */
+  bottom: -5px; /* Adjust the distance between text and highlight */
+  left: 15px;
+  z-index: -1; /* Place the highlight behind the text */
 }
-
 
 /* Add the styles for the Instagram button here */
 .btn_one {
-    color: #FFFFFF; /* White text color */
-    padding: 10px 20px; /* Adjust padding as needed */
-    font-size:18px;
-    font-family: 'Roboto', sans-serif;
-    border:3px solid #fff;
-    padding:8px 40px;
-    border-radius:80px;
-    font-weight:bold;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease; /* Transition for smooth animation */
-    background-image: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045); /* Instagram-like gradient */
-    background-size: 200% 200%;
-    background-position: 0 0;
-    background-clip: text; /* Make text color match the gradient */
-    -webkit-background-clip: text; /* For Safari */
+  color: #ffffff; /* White text color */
+  padding: 10px 20px; /* Adjust padding as needed */
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  border: 3px solid #fff;
+  padding: 8px 40px;
+  border-radius: 80px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease; /* Transition for smooth animation */
+  background-image: linear-gradient(
+    45deg,
+    #833ab4,
+    #fd1d1d,
+    #fcb045
+  ); /* Instagram-like gradient */
+  background-size: 200% 200%;
+  background-position: 0 0;
+  background-clip: text; /* Make text color match the gradient */
+  -webkit-background-clip: text; /* For Safari */
 }
 .btn_one:hover {
-    background-position: 100% 0; /* Move the gradient position on hover */
-    transform: scale(1.1); /* Increase size on hover */
+  background-position: 100% 0; /* Move the gradient position on hover */
+  transform: scale(1.1); /* Increase size on hover */
 }
 /* Optional: Add some box shadow for depth */
 .btn_one:focus {
-    box-shadow: 0 0 10px rgba(64, 93, 230, 0.5);
+  box-shadow: 0 0 10px rgba(64, 93, 230, 0.5);
 }
 /* Optional: Style anchor tag within the button */
 .btn_one a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 .container form input {
-    width:46%;
-    margin:20px 1%;
-    background:transparent;
-    border:0px;
-    border-bottom:3px solid rgba(255,255,255,0.5);
-    padding:8px 10px;
-    font-family: 'Roboto', sans-serif;
-    font-size:18px;
-    transition:0.4s ease-in-out;
-    color:#fff;
-    font-weight:bold;
+  width: 46%;
+  margin: 20px 1%;
+  background: transparent;
+  border: 0px;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+  padding: 8px 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  transition: 0.4s ease-in-out;
+  color: #fff;
+  font-weight: bold;
 }
 .container form textarea {
-    width:96%;
-    margin:20px 1%;
-    padding:8px 10px;
-    border:0px;
-    border-bottom:3px solid rgba(255,255,255,0.5);
-    padding:8px 10px;
-    font-family: 'Roboto', sans-serif;
-    font-size:18px;
-    background:transparent;
-    resize:none;
-    transition:0.4s ease-in-out;
-    color:#fff;
-    font-weight:bold;
+  width: 96%;
+  margin: 20px 1%;
+  padding: 8px 10px;
+  border: 0px;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+  padding: 8px 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  background: transparent;
+  resize: none;
+  transition: 0.4s ease-in-out;
+  color: #fff;
+  font-weight: bold;
 }
 .container form input:focus {
-    outline:none;
-    border-bottom:3px solid rgba(255, 255, 255,1);
+  outline: none;
+  border-bottom: 3px solid rgba(255, 255, 255, 1);
 }
 .container form textarea:focus {
-    outline:none;
-    border-bottom:3px solid rgba(255, 255, 255,1);
+  outline: none;
+  border-bottom: 3px solid rgba(255, 255, 255, 1);
 }
 ::placeholder {
-    color:#fff;
+  color: #fff;
 }
 #footer {
-    color:#fff;
-    width:92vw;
-    padding:5vh 4vw;
-    text-align:right;
-    position:fixed;
-    z-index:1;
-    bottom:0;
-    font-size:16px;
-    font-weight:bold;
+  color: #fff;
+  width: 92vw;
+  padding: 5vh 4vw;
+  text-align: right;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  font-size: 16px;
+  font-weight: bold;
 }
 #footer a {
-    color:rgb(238, 246, 252) ;
+  color: rgb(238, 246, 252);
 }
 #particles-js {
-    position:fixed;
-    width:100vw;
-    height:100vh;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
 }
 ::-webkit-scrollbar {
-    width:5px;
-    height:5px;
+  width: 5px;
+  height: 5px;
 }
 ::-webkit-scrollbar-track {
-    background: #fff; 
+  background: #fff;
 }
 ::-webkit-scrollbar-thumb {
-    background: rgb(3, 11, 17); 
+  background: rgb(3, 11, 17);
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(3, 11, 17,0.8); 
+  background: rgba(3, 11, 17, 0.8);
 }
 ::selection {
-	color: #fff;
-	background: rgb(3, 11, 17);
+  color: #fff;
+  background: rgb(3, 11, 17);
 }
 
-@media (max-width: 600px){ 
-    #projects {
-        display:none;
-    }
-    #about {
-        display:none;
-    }
-    #contact {
-        display:none;
-    }
-    #work {
-        display:none;
-    }
-    #footer {
-        text-align:center;
-    }
-    #middle {
-        width:90vw;
-        padding:0px 5vw;
-    }
-    #middle table {
-        width:80%;
-    }
-    .container form input {
-        width:90%;
-    }
-    .container form textarea {
-        width:90%;
-    }
-    #menu {
-        display:inline-block;
-    }
-    #onlywide {
-        display:none !important;
-    }
-    .box2 {
-        margin-left:0px !important;
-    }
-    #box div {
-        width:100%;
-    }
+@media (max-width: 600px) {
+  #about {
+    display: none;
+  }
+  #contact {
+    display: none;
+  }
+  #photos {
+    display: none;
+  }
+  #footer {
+    text-align: center;
+  }
+  #middle {
+    width: 90vw;
+    padding: 0px 5vw;
+  }
+  #middle table {
+    width: 80%;
+  }
+  .container form input {
+    width: 90%;
+  }
+  .container form textarea {
+    width: 90%;
+  }
+  #menu {
+    display: inline-block;
+  }
+  #onlywide {
+    display: none !important;
+  }
+  .box2 {
+    margin-left: 0px !important;
+  }
+  #box div {
+    width: 100%;
+  }
 }
