@@ -195,8 +195,9 @@ body {
   background: transparent;
   color: #fff;
   position: fixed;
-  top: 0;
-  right: 45vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the element */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -223,6 +224,19 @@ body {
   transition: 0.4s ease-in-out;
   border-radius: 0px 0px 150px 150px;
 }
+
+@media (min-width: 800px) {
+  #photos {
+    border-radius: 0px 0px 100px 100px; /* Adjust the values as needed */
+  }
+  #contact {
+    border-radius: 0px 0px 100px 100px; /* Adjust the values as needed */
+  }
+  #about {
+    border-radius: 0px 0px 100px 100px; /* Adjust the values as needed */
+  }
+}
+
 #about:hover {
   background: rgba(3, 11, 17, 0.9);
   cursor: pointer;
