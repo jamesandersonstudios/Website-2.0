@@ -381,7 +381,7 @@ body {
   background-size: 200% 200%;
   background-position: 0 0;
   background-clip: text; /* Make text color match the gradient */
-  -webkit-background-clip: text; /* For Safari */
+  -webkit-background-clip: text;
 }
 .btn_one:hover {
   background-position: 100% 0; /* Move the gradient position on hover */
