@@ -2,8 +2,8 @@
 
 /* Add these rules to customize the hover color of Font Awesome icons for each social link */
 /* Add these rules to dynamically change the hover color based on the logo color */
-.social.linkedin:hover {
-  color: #0077b5; /* LinkedIn color */
+.social.youtube:hover {
+  color: #ff0000; /* YouTube color */
 }
 
 .social.twitter:hover {
