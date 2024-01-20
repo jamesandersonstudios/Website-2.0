@@ -445,7 +445,7 @@ body {
   z-index: 1;
   bottom: 0;
   font-size: 8px;
-  font-weight: bold;
+  font-weight: none;
 }
 #footer a {
   color: rgb(238, 246, 252);
