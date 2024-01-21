@@ -68,7 +68,6 @@
                 <!-- Images will be dynamically added here by JavaScript -->
             </div>
         </section>
-
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 // Assuming your image filenames follow a pattern like image1.jpg, image2.jpg, ..., image100.jpg
@@ -80,13 +79,18 @@
                 // Loop to generate HTML for each image
                 for (let i = 1; i <= numberOfImages; i++) {
                     const imgElement = document.createElement('img');
-                    imgElement.src = `./photos/image${i}.jpg`; // Adjust the path as needed
+                    // Use data-src to store the actual image source
+                    imgElement.dataset.src = `./photos/image${i}.jpg`; // Adjust the path as needed
                     imgElement.alt = `Image ${i}`;
-
+                    // Add lazy loading attribute
+                    imgElement.loading = 'lazy';
                     // Add a class to alternate between horizontal and vertical images
                     if (i % 2 === 0) {
                         imgElement.classList.add('vertical-image');
                     }
+
+                    // Set a lower resolution or blurred placeholder initially
+                    imgElement.src = `./photos/image${i}_low.jpg`; // Adjust the path as needed
 
                     // Check if the image exists using the onerror event
                     imgElement.onerror = function () {
@@ -102,6 +106,22 @@
                     // Append the image to the gallery container
                     galleryContainer.appendChild(imgElement);
                 }
+
+                // Intersection Observer to load high-quality images when they come into view
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            observer.unobserve(lazyImage);
+                        }
+                    });
+                });
+
+                // Observe each image in the gallery
+                document.querySelectorAll('.gallery img').forEach(img => {
+                    observer.observe(img);
+                });
             });
         </script>
     </div>
