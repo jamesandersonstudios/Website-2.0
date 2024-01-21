@@ -83,7 +83,7 @@
                 for (let i = 1; i <= numberOfImages; i++) {
                     const imgElement = document.createElement('img');
                     // Use data-src to store the actual image source
-                    imgElement.dataset.src = `./photos/image${i}.jpg`; // Adjust the path as needed
+                    imgElement.dataset.src = `./photos/image${i}.webp`; // Adjust the path as needed
                     imgElement.alt = `Image ${i}`;
                     // Add lazy loading attribute
                     imgElement.loading = 'lazy';
@@ -93,7 +93,7 @@
                     }
 
                     // Set a lower resolution or blurred placeholder initially
-                    imgElement.src = `./photos/image${i}_low.jpg`; // Adjust the path as needed
+                    imgElement.src = `./photos/image${i}_low.webp`; // Adjust the path as needed
 
                     // Check if the image exists using the onerror event
                     imgElement.onerror = function () {
