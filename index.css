@@ -22,6 +22,10 @@
   color: #333; /* GitHub color */
 }
 
+.social.pinterest:hover {
+  color: #e60023; /* Pinterest color */
+}
+
 /* Add the styles for the Instagram button here */
 .btn_one {
   background: linear-gradient(
