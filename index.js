@@ -126,7 +126,6 @@ function showcontact() {
     }, 1000);
   }, 1000);
 }
-
 function closecontact() {
   // Add the fadeOut animation to the about container
   $("#contact_container").addClass("animated fadeOut");
@@ -137,7 +136,6 @@ function closecontact() {
     $("#contact_container").css("display", "none");
   }, 1000);
 }
-
 setTimeout(function () {
   $("#loading").addClass("animated fadeOut");
   setTimeout(function () {
