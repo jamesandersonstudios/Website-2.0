@@ -24,12 +24,14 @@
     <div id="loading">
         <div id="spinner"></div>
     </div>
+    <a id="photos" onclick="showphotos()" class="animated fadeIn" style="animation-delay: 500ms;">Gallery</a>
     <a id="about" onclick="showabout()" class="animated fadeIn" style="animation-delay: 500ms;">About</a>
     <a id="contact" onclick="showcontact()" class="animated fadeIn" style="animation-delay: 500ms;">Contact</a>
     <div id="middle" class="animated slideInDown" style="animation-delay: 1000ms;">
         <h1>Hi, I'm <span style="text-decoration: underline;">James</span></h1>
         <h2>Independent Photographer / Graphic Designer</h2>
         <div id="menu">
+            <a onclick="showphotos()">Gallery</a>
             <a onclick="showabout()">About</a>
             <a onclick="showcontact()">Contact</a>
         </div>
@@ -60,6 +62,75 @@
                             class="fab fa-pinterest"></i></a>
             </tr>
         </table>
+    </div>
+    <div id="photos_container" class="container">
+        <div onclick="closephotos()"><i class="fas fa-angle-up"></i></div>
+        <h1 class="highlight-text">Gallery</h1>
+        <section>
+            <button class="btn_one"><a href="https://www.instagram.com/jamesphotographypublic/"
+                    style="color: inherit; text-decoration: none"> View All Photos <a
+                        class="fa-solid fa-arrow-up-right-from-square"
+                        href="https://www.instagram.com/jamesphotographypublic/"><i class=""></i></a> </a></button>
+            <div id="gallery" class="gallery">
+                <!-- Images will be dynamically added here by JavaScript -->
+            </div>
+        </section>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Assuming your image filenames follow a pattern like image1.jpg, image2.jpg, ..., image100.jpg
+                const numberOfImages = 100;
+
+                // Reference to the gallery container
+                const galleryContainer = document.getElementById('gallery');
+
+                // Loop to generate HTML for each image
+                for (let i = 1; i <= numberOfImages; i++) {
+                    const imgElement = document.createElement('img');
+                    // Use data-src to store the actual image source
+                    imgElement.dataset.src = `./photos/image${i}.webp`; // Adjust the path as needed
+                    imgElement.alt = `Image ${i}`;
+                    // Add lazy loading attribute
+                    imgElement.loading = 'lazy';
+                    // Add a class to alternate between horizontal and vertical images
+                    if (i % 2 === 0) {
+                        imgElement.classList.add('vertical-image');
+                    }
+
+                    // Set a lower resolution or blurred placeholder initially
+                    imgElement.src = `./photos/image${i}_low.webp`; // Adjust the path as needed
+
+                    // Check if the image exists using the onerror event
+                    imgElement.onerror = function () {
+                        // Remove the image element if it fails to load (doesn't exist)
+                        galleryContainer.removeChild(imgElement);
+                    };
+
+                    // Prevent right-click context menu on the image
+                    imgElement.addEventListener('contextmenu', function (event) {
+                        event.preventDefault();
+                    });
+
+                    // Append the image to the gallery container
+                    galleryContainer.appendChild(imgElement);
+                }
+
+                // Intersection Observer to load high-quality images when they come into view
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            observer.unobserve(lazyImage);
+                        }
+                    });
+                });
+
+                // Observe each image in the gallery
+                document.querySelectorAll('.gallery img').forEach(img => {
+                    observer.observe(img);
+                });
+            });
+        </script>
     </div>
     <div id="about_container" class="container">
         <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
@@ -120,13 +191,8 @@
         }
     </style>
     <div id="footer">
-        <div class="footer-links">
-            <a href="https://jamesphotographypublic.github.io/privacy_policy" target="_blank">Privacy Policy</a>
-            <span class="divider"> | </span>
-            <a href="https://jamesphotographypublic.github.io/tos" target="_blank">Terms of Service</a>
-        </div>
-        <p>© 2017 – 2024 <a href="https://www.instagram.com/jamesphotography.ig" target="_blank">James Photography</a> |
-            All Rights Reserved</p>
+        © 2017 – 2024 <a href="https://www.instagram.com/jamesphotography.ig">James Photography</a> | All Rights
+        Reserved
     </div>
 </body>
 
