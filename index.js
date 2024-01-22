@@ -104,19 +104,40 @@ function closeabout() {
 }
 
 function showcontact() {
-  $("#contact_container").css("display", "inherit");
-  $("#contact_container").addClass("animated slideInUp");
+  // Display the loading animation with fade-in effect
+  $("#loading").css("display", "flex").addClass("animated fadeIn");
+
+  // Simulate loading time (adjust the timeout duration as needed)
   setTimeout(function () {
-    $("#contact_container").removeClass("animated slideInUp");
+    // Remove the fade-in class to hide the loading animation
+    $("#loading").removeClass("animated fadeIn");
+
+    // Show the about container without a fade-in effect
+    $("#contact_container").css("display", "inherit");
+
+    // Optionally, you can add other animations or effects here if needed
+
+    // Add the fadeOut class to the loading animation
+    $("#loading").addClass("animated fadeOut");
+
+    // Remove the fadeOut class and hide the loading animation after the animation completes
+    setTimeout(function () {
+      $("#loading").removeClass("animated fadeOut").css("display", "none");
+    }, 1000);
   }, 1000);
 }
+
 function closecontact() {
-  $("#contact_container").addClass("animated slideOutDown");
+  // Add the fadeOut animation to the about container
+  $("#contact_container").addClass("animated fadeOut");
+
+  // Remove the fadeOut class and hide the about container after the animation completes
   setTimeout(function () {
-    $("#contact_container").removeClass("animated slideOutDown");
+    $("#contact_container").removeClass("animated fadeOut");
     $("#contact_container").css("display", "none");
   }, 1000);
 }
+
 setTimeout(function () {
   $("#loading").addClass("animated fadeOut");
   setTimeout(function () {
