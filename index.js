@@ -1,17 +1,3 @@
-function showphotos() {
-  $("#photos_container").css("display", "inherit");
-  $("#photos_container").addClass("animated slideInDown");
-  setTimeout(function () {
-    $("#photos_container").removeClass("animated slideInDown");
-  }, 1000);
-}
-function closephotos() {
-  $("#photos_container").addClass("animated slideOutUp");
-  setTimeout(function () {
-    $("#photos_container").removeClass("animated slideOutUp");
-    $("#photos_container").css("display", "none");
-  }, 1000);
-}
 function showabout() {
   $("#about_container").css("display", "inherit");
   $("#about_container").addClass("animated slideInLeft");
