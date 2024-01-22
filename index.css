@@ -348,6 +348,35 @@ body {
   background: rgb(3, 11, 17);
 }
 
+#footer {
+  color: #ffffff2b;
+  width: 92vw;
+  padding: 5vh 4vw;
+  text-align: right;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  font-size: 12px;
+  font-weight: none;
+  background-color: transparent;
+  /* Set the background color to transparent */
+}
+
+#footer a {
+  color: #ffffff2b;
+  text-decoration: underline;
+  /* Add underline to links */
+}
+
+/* Media query for screens with a maximum width of 600px (typical for phones) */
+@media only screen and (max-width: 600px) {
+  #footer {
+    font-size: 8px; /* Adjust the font size for smaller screens */
+    width: 100%; /* Make the width 100% for better responsiveness on small screens */
+    padding: 3vh 4vw; /* Adjust padding for better spacing on small screens */
+  }
+}
+
 @media (max-width: 800px) {
   #about {
     display: none;
