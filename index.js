@@ -50,5 +50,5 @@ setTimeout(function () {
     $("#about").removeClass("animated fadeIn");
     $("#contact").removeClass("animated fadeIn");
     $("#photos").removeClass("animated fadeIn");
-  }, 1500);
-}, 2000);
+  }, 1000);
+}, 1500);

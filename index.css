@@ -436,20 +436,6 @@ body {
 ::placeholder {
   color: #fff;
 }
-#footer {
-  color: #fff;
-  width: 92vw;
-  padding: 5vh 4vw;
-  text-align: right;
-  position: fixed;
-  z-index: 1;
-  bottom: 0;
-  font-size: 12px;
-  font-weight: none;
-}
-#footer a {
-  color: rgb(238, 246, 252);
-}
 #particles-js {
   position: fixed;
   width: 100vw;
