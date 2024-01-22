@@ -118,16 +118,9 @@ body {
   background: rgb(3, 11, 17);
   margin-left: -5px;
 }
-
 #menu {
-  width: 100%;
-  text-align: center;
-  margin: 2vh 0px;
-  display: none;
-}
-#menu a {
   margin: 0px 2%;
-  font-size: 19px;
+  font-size: 18px;
   color: #fff;
   text-decoration: underline;
   font-weight: bold;
@@ -151,61 +144,7 @@ body {
   text-decoration: none;
 }
 
-#about {
-  width: 10vw;
-  height: 10vw;
-  text-align: center;
-  font-size: 25px;
-  font-weight: bold;
-  transform: rotate(-90deg);
-  background: transparent;
-  color: #fff;
-  position: fixed;
-  left: 0;
-  bottom: 40vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  z-index: 4;
-  transition: 0.4s ease-in-out;
-  border-radius: 0px 0px 100px 100px;
-}
-#contact {
-  width: 10vw;
-  height: 10vw;
-  text-align: center;
-  font-size: 25px;
-  font-weight: bold;
-  transform: rotate(90deg);
-  background: transparent;
-  color: #fff;
-  position: fixed;
-  right: 0;
-  bottom: 40vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  z-index: 4;
-  transition: 0.4s ease-in-out;
-  border-radius: 0px 0px 100px 100px;
-}
-
 @media (min-width: 800px) {
-}
-#contact {
-  border-radius: 0px 0px 100px 100px; /* Adjust the values as needed */
-}
-#about {
-  border-radius: 0px 0px 100px 100px; /* Adjust the values as needed */
-}
-
-#about:hover {
-  background: rgba(3, 11, 17, 0.9);
-  cursor: pointer;
-}
-#contact:hover {
-  background: rgba(3, 11, 17, 0.9);
-  cursor: pointer;
 }
 #middle table {
   width: 30%;
@@ -216,15 +155,11 @@ body {
 }
 .social {
   color: #fff;
-  font-size: 22px;
+  font-size: 24px;
   border-radius: 50%;
   transition: 0.4s ease-in-out;
   margin: 0px 8px;
   text-align: center;
-}
-.social:hover {
-  cursor: pointer;
-  color: rgb(3, 11, 17);
 }
 .container {
   width: 90vw;
@@ -395,11 +330,6 @@ body {
 ::placeholder {
   color: #fff;
 }
-#particles-js {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-}
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
@@ -420,9 +350,6 @@ body {
 
 @media (max-width: 800px) {
   #about {
-    display: none;
-  }
-  #contact {
     display: none;
   }
   #footer {

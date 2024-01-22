@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description"
         content="Explore the captivating portfolio of James, a professional self-taught photographer and graphic designer based in Australia. Contact James for collaborations and witness a diverse range of photos that bring creative ideas to life.">
-    <title>James | Portfolio</title>
+    <meta name="google-site-verification" content="ynUU3cPSZ4h1pdJJcTdxotdTsG63NfiS4IbQE5tyIeE" />
+    <title>James Photography</title>
     <link rel="icon" type="image" href="./assets/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -24,14 +25,11 @@
     <div id="loading">
         <div id="spinner"></div>
     </div>
-    <a id="about" onclick="showabout()" class="animated fadeIn" style="animation-delay: 500ms;">About</a>
-    <a id="contact" onclick="showcontact()" class="animated fadeIn" style="animation-delay: 500ms;">Contact</a>
     <div id="middle" class="animated slideInDown" style="animation-delay: 1000ms;">
         <h1>Hi, I'm <span style="text-decoration: underline;">James</span></h1>
         <h2>Independent Photographer / Graphic Designer</h2>
         <div id="menu">
-            <a onclick="showabout()">About</a>
-            <a onclick="showcontact()">Contact</a>
+            <a onclick="showabout()"><button class="btn_one">Learn More About Me</button></a>
         </div>
         <table>
             <tr>
@@ -85,7 +83,7 @@
         </section>
     </div>
     <div id="contact_container" class="container">
-        <div onclick="closecontact()"><i class="fas fa-angle-right"></i></div>
+        <div onclick="closecontact()"><i class="fas fa-angle-down"></i></div>
         <h1 class="highlight-text3">Contact</h1>
         <section>
             <p>
@@ -124,6 +122,8 @@
             <a href="https://jamesphotographypublic.github.io/privacy_policy" target="_blank">Privacy Policy</a>
             <span class="divider"> | </span>
             <a href="https://jamesphotographypublic.github.io/tos" target="_blank">Terms of Service</a>
+            <span class="divider"> | </span>
+            <a onclick="showcontact()">Contact Me</a>
         </div>
         <p>© 2017 – 2024 <a href="https://www.instagram.com/jamesphotography.ig" target="_blank">James Photography</a> |
             All Rights Reserved</p>
