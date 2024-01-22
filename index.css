@@ -148,7 +148,7 @@ body {
 }
 #middle table {
   width: 30%;
-  margin: 6vh auto;
+  margin: 5vh auto;
 }
 #middle table tr td {
   text-align: center;
@@ -369,7 +369,7 @@ body {
 }
 
 /* Media query for screens with a maximum width of 600px (typical for phones) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   #footer {
     font-size: 8px; /* Adjust the font size for smaller screens */
     width: 100%; /* Make the width 100% for better responsiveness on small screens */
@@ -377,7 +377,7 @@ body {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   #about {
     display: none;
   }
