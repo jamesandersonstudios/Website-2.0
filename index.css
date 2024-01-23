@@ -262,6 +262,7 @@ body {
   font-family: "Roboto", sans-serif;
   border: 3px solid #fff;
   padding: 8px 40px;
+  margin-top: 30px;
   border-radius: 80px;
   font-weight: bold;
   cursor: pointer;
