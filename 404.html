@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 Not Found</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+    <link defer href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: black;
@@ -32,7 +32,6 @@
             display: inline-block;
             animation: blink 0.7s infinite;
             position: absolute;
-            bottom: 5px;
             left: 0;
         }
 
@@ -40,6 +39,54 @@
             50% {
                 opacity: 0;
             }
+        }
+
+        /* Add the styles for the Instagram button here */
+        .btn_one {
+            color: #ffffff;
+            /* White text color */
+            padding: 10px 20px;
+            /* Adjust padding as needed */
+            font-size: 18px;
+            font-family: "Roboto", sans-serif;
+            border: 3px solid #fff;
+            padding: 8px 40px;
+            border-radius: 80px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+            /* Transition for smooth animation */
+            background-image: linear-gradient(45deg,
+                    #833ab4,
+                    #fd1d1d,
+                    #fcb045);
+            /* Instagram-like gradient */
+            background-size: 200% 200%;
+            background-position: 0 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn_one span {
+            background-clip: text;
+            /* Make text color match the gradient */
+            -webkit-background-clip: text;
+            color: transparent;
+            position: relative;
+            z-index: 2;
+            display: inline-block;
+        }
+
+        .btn_one:hover {
+            background-position: 100% 0;
+            /* Move the gradient position on hover */
+            transform: scale(1.1);
+            /* Increase size on hover */
+        }
+
+        /* Optional: Add some box shadow for depth */
+        .btn_one:focus {
+            box-shadow: 0 0 10px rgba(64, 93, 230, 0.5);
         }
     </style>
 </head>
@@ -77,6 +124,9 @@
             type();
         });
     </script>
+    <div id="error404return">
+        <a href="https://jamesphotographypublic.github.io/"><button target="_self" class="btn_one">Return to
+                Safety</button></a>
 </body>
 
 </html>
